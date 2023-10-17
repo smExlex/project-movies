@@ -25,4 +25,38 @@ p {
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 }
 
+.movie-item {
+  background-color: aqua;
+}
+
+.movie-item img {
+  width: 100%;
+}
+
+.moviedetails-wrapper {
+  padding: 1rem; 
+}
+
+.moviedetails-wrapper img {
+  border: solid #fff;
+  width: 100%;
+}
+
+.description {
+  width: 100%;
+}
+
+@media (min-width: 400px) {
+  .moviedetails-wrapper img {
+    width: 60%; 
+  }
+
+}
+
+@media (min-width: 800px) {
+  .moviedetails-wrapper img {
+    width: 30%; 
+  }
+}
+
 

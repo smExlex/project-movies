@@ -1,5 +1,7 @@
 import { useParams } from 'react-router-dom'
 import React from 'react'
+import star from "../../public/star.svg"
+
 
 export const MovieDetails = ({ movieList }) => {
     //useParams is here, it takes the thing behind the : in App, ie id, and makes it a variable we can use to match our content here. 
@@ -19,16 +21,18 @@ export const MovieDetails = ({ movieList }) => {
     const backgroundStyle = {
         backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${movieMatch.backdrop_path})`,
         ariaLabel: movieMatch.title,
+       
     };
 
   return (
-    <section className='moviedetails-section' style={backgroundStyle}>
-        <a href="/">GO BACK</a>
+    <section className='moviedetails-section'style={backgroundStyle} >
+        <div className='moviedetails-wrapper' >
         <img src={`https://image.tmdb.org/t/p/w342/${movieMatch.poster_path}`} alt={movieMatch.title} />
         <h2>{movieMatch.title}</h2>
         <p className='release-date'>{movieMatch.release_date}</p>
-        <p className='vote'>{movieMatch.vote_average}</p>
+        <p className='vote'>⭐️ {movieMatch.vote_average}</p>
         <p className='description'>{movieMatch.overview}</p>
+        </div>
     </section>
   )
 }
