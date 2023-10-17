@@ -41,9 +41,9 @@ export const App = () => {
     return (
         <BrowserRouter>
             <main>
-                <h1>MOVIES</h1>
+                <h1>UPCOMING MOVIES</h1>
                 <Routes>
-                    
+
                     <Route path="/" element={<Home movieList={movieList}/>}></Route>
                     <Route
                         path="/moviedetails/:id"

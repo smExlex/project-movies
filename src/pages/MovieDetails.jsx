@@ -18,6 +18,7 @@ export const MovieDetails = ({ movieList }) => {
 
     const backgroundStyle = {
         backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${movieMatch.backdrop_path})`,
+        ariaLabel: movieMatch.title,
     };
 
   return (

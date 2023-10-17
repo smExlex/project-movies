@@ -3,8 +3,7 @@ export const Movie = ({ movie }) => {
 
     const backgroundMovieGrid = {
         backgroundImage: `url(https://image.tmdb.org/t/p/w342/${movie.poster_path})`,
-        ariaLabel: movie.title
-        
+        ariaLabel: movie.title,
     }
 
     return(
