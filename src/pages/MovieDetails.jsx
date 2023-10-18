@@ -28,7 +28,6 @@ export const MovieDetails = ({ upcomingList }) => {
           src={`https://image.tmdb.org/t/p/w342/${upcomingMatch.poster_path}`}
           alt={upcomingMatch.title}
         />
-
         <h2>{upcomingMatch.title}</h2>
         <p className="release-date">{upcomingMatch.release_date}</p>
         <p className="vote">⭐️ {upcomingMatch.vote_average}</p>
