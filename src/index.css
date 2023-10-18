@@ -6,6 +6,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
+  color: #fff;
 }
 
 code {
@@ -14,16 +15,27 @@ code {
   margin: 0;
 }
 
-h2 {
-  color: white;
-}
-p {
-  color: white;
-}
-
 a {
   text-decoration: none;
 }
+/*NAV*/
+
+.nav-bar {
+  background-color: rgb(28, 28, 28);
+  padding: 0.3rem;
+  margin: 0.7rem 0;
+  text-decoration: none;
+  /* color: #fff; */
+}
+
+.nav-bar ul li {
+  list-style-type: none;
+}
+
+.nav-bar h1 {
+  color: #fff;
+}
+
 /*MOVIELIST*/
 .movieList-section {
   display: grid;
