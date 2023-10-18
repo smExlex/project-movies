@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Movie } from "../components/Movie.jsx";
+
 //import { MovieDetails } from "./MovieDetails";
 
 export const Home = ({ upcomingList }) => {

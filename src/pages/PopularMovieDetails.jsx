@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import React from "react";
 
-export const MovieDetails = ({ popularList }) => {
+export const PopularMovieDetails = ({ popularList }) => {
   //useParams is here, it takes the thing behind the : in App, ie id, and makes it a variable we can use to match our content here.
   const { id } = useParams();
 

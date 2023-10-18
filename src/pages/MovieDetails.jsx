@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import React from "react";
+import { NotFoundPage } from "./NotFoundPage";
 //import star from "../../public/star.svg";
 
 export const MovieDetails = ({ upcomingList }) => {
@@ -13,6 +14,10 @@ export const MovieDetails = ({ upcomingList }) => {
   const upcomingMatch = upcomingList.find(
     (clickedMovie) => clickedMovie.id.toString() === id
   );
+
+  if (upcomingMatch === undefined) {
+    return <NotFoundPage />;
+  }
 
   console.log("upcoming match", upcomingMatch);
 
@@ -36,6 +41,7 @@ export const MovieDetails = ({ upcomingList }) => {
     </section>
   );
 };
+
 //     <section className="moviedetails-section">
 //       {MovieArrays.map((movie) => (
 //         <div className="moviedetails-wrapper">

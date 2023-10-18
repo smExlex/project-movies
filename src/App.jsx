@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import { Nav } from "./components/Nav.jsx";
 // import { routes } from "./components/routes/routes.jsx"
-// import { NotFoundPage } from "./pages/NotFoundPage.jsx";
+import { NotFoundPage } from "./pages/NotFoundPage.jsx";
 import { Home } from "./pages/Home.jsx";
 import { Popular } from "./pages/Popular.jsx";
 import { MovieDetails } from "./pages/MovieDetails.jsx";
+import { PopularMovieDetails } from "./pages/PopularMovieDetails.jsx";
 
 export const App = () => {
   //useState to save the data array from API into movieList
@@ -13,12 +14,16 @@ export const App = () => {
   const [popularList, setPopularList] = useState([]);
 
   //declaring the movie API for upcoming movies
-  const APIupcoming =
-    "https://api.themoviedb.org/3/movie/upcoming?api_key=c7533a3f72d545439eb19302b76b29a4&language=en-US&";
+  const APIupcoming = `https://api.themoviedb.org/3/movie/upcoming?api_key=${
+    import.meta.env.VITE_APP_API_KEY
+  }&language=en-US&`;
+
+  console.log(APIupcoming);
 
   //declaring the movie API for popular movies
-  const APIpopular =
-    "https://api.themoviedb.org/3/movie/popular?api_key=c7533a3f72d545439eb19302b76b29a4&language=en-US&page=1";
+  const APIpopular = `https://api.themoviedb.org/3/movie/popular?api_key=${
+    import.meta.env.VITE_APP_API_KEY
+  }&language=en-US&page=1`;
 
   //creating a function to fetch the movie data
   const fetchUpcomingMovies = async () => {
@@ -73,14 +78,19 @@ export const App = () => {
             element={
               <MovieDetails
                 upcomingList={upcomingList}
-                popularList={popularList}
+                // popularList={popularList}
               />
             }
+          ></Route>
+          <Route
+            path="/popularmoviedetails/:id"
+            element={<PopularMovieDetails popularList={popularList} />}
           ></Route>
           <Route
             path="/popular"
             element={<Popular popularList={popularList} />}
           ></Route>
+          <Route path="*" element={<NotFoundPage />}></Route>
         </Routes>
       </main>
     </BrowserRouter>

@@ -7,6 +7,7 @@
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
   color: #fff;
+  overflow-x: hidden;
 }
 
 code {
@@ -50,6 +51,7 @@ a.active {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  /* overflow-x: hidden; */
 }
 /*MOVIE CARD*/
 .movie-card {
