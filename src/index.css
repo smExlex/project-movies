@@ -22,10 +22,16 @@ a {
 
 .nav-bar {
   background-color: rgb(28, 28, 28);
+  width: 100%;
   padding: 0.3rem;
   margin: 0.7rem 0;
   text-decoration: none;
-  /* color: #fff; */
+}
+
+.nav-bar ul {
+  background-color: rgb(28, 28, 28);
+  display: flex;
+  justify-content: space-around;
 }
 
 .nav-bar ul li {
@@ -34,6 +40,9 @@ a {
 
 .nav-bar h1 {
   color: #fff;
+}
+a.active {
+  text-decoration: #fff wavy underline;
 }
 
 /*MOVIELIST*/

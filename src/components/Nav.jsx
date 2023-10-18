@@ -7,12 +7,12 @@ export const Nav = () => {
       <ul>
         <li>
           <NavLink to="/">
-            {/* <img
-              classname="home-icon"
-              src="src/assets/home-icon.svg"
-              alt="Home icon"
-            /> */}
-            <h1>HOME</h1>
+            <h1>UPCOMING MOVIES</h1>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/popular">
+            <h1>POPULAR MOVIES</h1>
           </NavLink>
         </li>
       </ul>
