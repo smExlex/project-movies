@@ -60,7 +60,7 @@ export const App = () => {
     fetchPopularMovies();
   }, []);
 
-  console.log("popular", popularList);
+  console.log("popular1", popularList);
   console.log("upcoming1", upcomingList);
 
   return (
@@ -68,7 +68,6 @@ export const App = () => {
       <main>
         <Nav />
         <Routes>
-          {/*<Route path="*" element={<NotFoundPage />} />*/}
           <Route
             path="/"
             element={<Home upcomingList={upcomingList} />}
@@ -78,7 +77,6 @@ export const App = () => {
             element={
               <MovieDetails
                 upcomingList={upcomingList}
-                // popularList={popularList}
               />
             }
           ></Route>

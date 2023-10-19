@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import { Movie } from "../components/Movie.jsx";
-
-//import { MovieDetails } from "./MovieDetails";
+import { MovieCard } from "../components/MovieCard.jsx";
 
 export const Home = ({ upcomingList }) => {
   //Här gör vi INTE FETCHEN! FLYTTAD TILL APP!!
@@ -17,7 +15,7 @@ export const Home = ({ upcomingList }) => {
           key={movie.id}
           to={`/moviedetails/${movie.id}`}
         >
-          <Movie movie={movie} />
+          <MovieCard movie={movie} />
         </Link>
       ))}
     </section>

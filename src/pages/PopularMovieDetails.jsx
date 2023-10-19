@@ -5,7 +5,9 @@ export const PopularMovieDetails = ({ popularList }) => {
   //useParams is here, it takes the thing behind the : in App, ie id, and makes it a variable we can use to match our content here.
   const { id } = useParams();
 
-  console.log("details id:", id);
+  console.log("details popular id:", id);
+  console.log("HEJHEJ", popularList)
+  
   //matching the id from clicked movie with the movieList array to get the right movie info
   //also, converting the movieList id to string, to be able to match them!
 
@@ -19,6 +21,7 @@ export const PopularMovieDetails = ({ popularList }) => {
     ariaLabel: popularMatch.title,
   };
 
+
   return (
     <section className="moviedetails-section" style={backgroundStyle}>
       <div className="moviedetails-wrapper">
@@ -27,7 +30,6 @@ export const PopularMovieDetails = ({ popularList }) => {
           src={`https://image.tmdb.org/t/p/w342/${popularMatch.poster_path}`}
           alt={popularMatch.title}
         />
-        <p className="release-date">{popularMatch.release_date}</p>
         <p className="vote">⭐️ {popularMatch.vote_average}</p>
         <p className="description">{popularMatch.overview}</p>
       </div>

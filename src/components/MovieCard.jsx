@@ -1,4 +1,4 @@
-export const Movie = ({ movie }) => {
+export const MovieCard = ({ movie }) => {
   return (
     <div className="movie-card">
       <img
@@ -7,7 +7,6 @@ export const Movie = ({ movie }) => {
       />
       <div className="movie-card-text-content">
         <h2>{movie.title}</h2>
-        {/*{movie.original_title}*/}
         <p>Release date: {movie.release_date}</p>
       </div>
     </div>
