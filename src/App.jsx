@@ -15,14 +15,14 @@ export const App = () => {
 
   //declaring the movie API for upcoming movies
   const APIupcoming = `https://api.themoviedb.org/3/movie/upcoming?api_key=${
-    import.meta.env.VITE_APP_API_KEY
+    import.meta.env.VITE_OPENDB_API_KEY
   }&language=en-US&`;
 
   console.log(APIupcoming);
 
   //declaring the movie API for popular movies
   const APIpopular = `https://api.themoviedb.org/3/movie/popular?api_key=${
-    import.meta.env.VITE_APP_API_KEY
+    import.meta.env.VITE_OPENDB_API_KEY
   }&language=en-US&page=1`;
 
   //creating a function to fetch the movie data
