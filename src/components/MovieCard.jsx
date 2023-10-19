@@ -1,4 +1,6 @@
 export const MovieCard = ({ movie }) => {
+
+  // When the component is used it returns a card for displaying information about the movie.
   return (
     <div className="movie-card">
       <img

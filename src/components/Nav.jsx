@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+ {/* This component defines a navigation bar with two links (UPCOMING MOVIES and POPULAR MOVIES) that navigate to different routes within a React application. When rendered, it will produce an HTML structure representing the navigation bar. */}
 export const Nav = () => {
   return (
     <nav className="nav-bar">

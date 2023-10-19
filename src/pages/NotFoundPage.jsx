@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import React from "react";
 
-import "./NotFoundPage.css";
+import "../styling/NotFoundPage.css";
+
+// This component renders a not-found page with a message informing the user that the requested page does not exist. It also provides a link to go back to the home page. 
 
 export const NotFoundPage = () => {
     return (

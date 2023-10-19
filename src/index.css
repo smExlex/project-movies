@@ -5,17 +5,15 @@
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: black;
+    background-color: rgb(3, 3, 3);
     color: #fff;
     overflow-x: hidden;
-    
 }
 
 * {
     margin: 0;
     box-sizing: border-box;
 }
-
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -26,10 +24,10 @@ code {
 a {
     text-decoration: none;
 }
-/*NAV*/
 
+/*NAVBAR*/
 .nav-bar {
-    background-color: rgb(28, 28, 28);
+    background-color: black;
     width: 100%;
     padding: 2rem;
     margin: 0;
@@ -39,7 +37,7 @@ a {
 }
 
 .nav-bar ul {
-    background-color: rgb(28, 28, 28);
+    background-color: black;
     display: flex;
     justify-content: space-around;
     margin: 0;
@@ -69,7 +67,7 @@ a.active {
 }
 /*MOVIE CARD*/
 .movie-card {
-    background-color: rgb(28, 28, 28);
+    background-color: black;
     border-radius: 1rem;
     color: white;
     height: 100%;
@@ -85,6 +83,13 @@ a.active {
     display: flex;
     flex-direction: column;
     gap: 1rem; 
+}
+
+.movie-card-text-content p {
+    color: rgb(180, 180, 180);
+}
+.movie-card:hover {
+    scale: 1.02; 
 }
 
 /*MOVIE DETAILS SECTION*/
