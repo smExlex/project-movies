@@ -5,7 +5,7 @@
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: rgb(3, 3, 3);
+    background-color: rgb(0, 0, 0);
     color: #fff;
     overflow-x: hidden;
 }
@@ -32,8 +32,9 @@ a {
     padding: 2rem;
     margin: 0;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 16px;
     text-align: center;
+    border-bottom: #fff 1px solid;
 }
 
 .nav-bar ul {
@@ -53,17 +54,16 @@ a {
 }
 
 a.active {
-    text-decoration: #fff  4px underline overline;
+    text-decoration: #fff  3px underline overline;
+    text-underline-offset: 6px;
 }
-
 
 /*MOVIELIST*/
 .movieList-section {
     margin: 3rem 2rem; 
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    /* overflow-x: hidden; */
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
 /*MOVIE CARD*/
 .movie-card {
@@ -71,8 +71,21 @@ a.active {
     border-radius: 1rem;
     color: white;
     height: 100%;
+    border: transparent 1px solid;
 }
 
+.image-overlay {
+    position: relative;
+    width: 100%;
+}
+
+.image-overlay::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(0, 255, 242, 0), rgba(0, 0, 0, 0), rgb(0, 0, 0) );
+}
 .movie-card img {
     width: 100%;
     border-radius: 1rem 1rem 0rem 0rem;
@@ -89,71 +102,76 @@ a.active {
     color: rgb(180, 180, 180);
 }
 .movie-card:hover {
-    scale: 1.02; 
+    scale: 1.02;
+    border: #fff 1px solid;
 }
 
 /*MOVIE DETAILS SECTION*/
 .moviedetails-section {
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto 100% ;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .moviedetails-wrapper {
     padding: 2rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
     background: linear-gradient(
-        to right,
+        to top,
         #000000,
-        rgba(0, 0, 0, 0.884),
+        rgba(0, 0, 0, 0.837),
         rgba(0, 0, 0, 0.622),
         rgba(0, 0, 0, 0)
     );
 }
 
 .moviedetails-wrapper img {
-    border: solid #fff;
-    width: 100%;
+    margin: 2rem 0;
+    border: solid 1px #fff;
+    width: 80%;
 }
 
 .moviedetails-infocontent {
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.title-vote-wrapper {
-    display: flex;
-    align-items: center;
-}
-
 .vote {
     background-color: black;
-    display: inline;
-    width: 60px;
-    height: 30px;
-    padding: 4px 6px;
+    width: fit-content;
+    padding: 2px 6px;
     border-radius: 4px;
-    margin-right: 0.5rem;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 500px) {
 
-    .nav-bar{
-      font-size: 20px;
+    .moviedetails-wrapper img {
+        max-width: 50%;
     }
+}
+
+@media (min-width: 650px ) {
+    .moviedetails-section {
+        display: flex;
+    }
+
     .moviedetails-wrapper {
         flex-direction: row;
         align-items: flex-end;
     }
-
-    .moviedetails-wrapper img {
-        width: 40%;
-    }
 }
 
 @media (min-width: 950px) {
+    .moviedetails-wrapper img {
+        max-width: 250px;
+    }
     .moviedetails-infocontent {
         max-width: 50%;
     }

@@ -8,12 +8,12 @@ export const Nav = () => {
       <ul>
         <li>
           <NavLink to="/">
-            <h1>UPCOMING MOVIES</h1>
+            <h1>UPCOMING</h1>
           </NavLink>
         </li>
         <li>
           <NavLink to="/popular">
-            <h1>POPULAR MOVIES</h1>
+            <h1>POPULAR</h1>
           </NavLink>
         </li>
       </ul>

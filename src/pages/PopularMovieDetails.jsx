@@ -18,7 +18,7 @@ export const PopularMovieDetails = ({ popularList }) => {
   );
   
   //returns not found page if there is no match
-  if (upcomingMatch === undefined) {
+  if (popularMatch === undefined) {
     return <NotFoundPage />;
   }
 
@@ -27,7 +27,6 @@ export const PopularMovieDetails = ({ popularList }) => {
     backgroundImage: `url(https://image.tmdb.org/t/p/w1280/${popularMatch.backdrop_path})`,
     ariaLabel: popularMatch.title,
   };
-
 
   return (
     <section className="moviedetails-section" style={backgroundStyle}>
