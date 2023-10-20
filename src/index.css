@@ -109,7 +109,7 @@ a.active {
 /*MOVIE DETAILS SECTION*/
 .moviedetails-section {
     background-repeat: no-repeat;
-    background-size: auto 100% ;
+    background-size: 100% ;
     background-position: center center;
     background-attachment: fixed;
 }
@@ -120,6 +120,7 @@ a.active {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     gap: 1rem;
     background: linear-gradient(
         to top,
